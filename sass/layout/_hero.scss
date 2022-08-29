@@ -1,0 +1,93 @@
+.hero {
+  margin: 0 auto;
+  background-color: var(--primary-bg-color);
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-mobil.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include retina {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg-mobil-2x.jpg);
+  }
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg-tablet.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-bg-tablet-2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-bg-2x.jpg);
+    }
+  }
+  > .container {
+    width: 100%;
+    padding: 0;
+  }
+  @media screen and (min-width: 480px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 768px) {
+      height: 84px;
+      width: 360px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+      height: 120px;
+      width: 696px;
+    }
+  }
+
+  &__btn {
+    padding: 10px 32px;
+    margin: 30px auto 0;
+    &:hover,
+    &:focus {
+      background-color: $BtnColorHover;
+    }
+  }
+}

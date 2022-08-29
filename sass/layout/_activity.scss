@@ -1,0 +1,47 @@
+.activity {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-title-color);
+    margin-bottom: 50px;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__item {
+    width: 100%;
+  }
+  &__wrap {
+    position: relative;
+  }
+  &__text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: rgba(47, 48, 58, 0.8);
+    padding-bottom: 27px;
+    padding-top: 27px;
+  }
+}
