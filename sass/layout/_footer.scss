@@ -1,6 +1,7 @@
 .footer {
   background-color: var(--primary-bg-color);
   padding: 60px 0;
+  text-align: center;
 
   &__box {
     display: flex;
@@ -10,18 +11,19 @@
     @media screen and (min-width: 768px) {
       align-items: baseline;
       gap: 0;
-      flex-wrap: nowrap;
     }
     @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
       align-items: baseline;
       gap: 0;
     }
   }
   &__address-box {
     @media screen and (min-width: 768px) {
-      flex-basis: 50%;
+      width: 50%;
     }
     @media screen and (min-width: 1200px) {
+      width: auto;
       margin-right: 70px;
     }
   }
@@ -82,17 +84,20 @@
 
 .join {
   @media screen and (min-width: 768px) {
-    flex-basis: 50%;
+    width: 50%;
+  }
+  @media screen and (min-width: 1200px) {
+    width: auto;
+    margin-right: auto;
   }
   &__title {
+    display: block;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--white);
-    margin-bottom: 20px;
     @media screen and (min-width: 1200px) {
       text-align: left;
     }
@@ -100,6 +105,7 @@
   &__list {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     @media screen and (min-width: 1200px) {
       justify-content: left;
@@ -121,13 +127,16 @@
     padding-top: 60px;
   }
   @media screen and (min-width: 1200px) {
-    margin-left: auto;
+    width: auto;
   }
   &__form {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+    @media screen and (min-width: 768px) {
+      gap: 0;
+    }
     @media screen and (min-width: 1200px) {
       flex-wrap: nowrap;
       gap: 0;
@@ -167,6 +176,7 @@
       letter-spacing: 0.03em;
       color: rgba(255, 255, 255, 0.6);
     }
+
     @media screen and (min-width: 1200px) {
       width: 358px;
       margin-right: 12px;

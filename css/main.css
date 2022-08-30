@@ -143,6 +143,16 @@ body {
   border-bottom: 1px solid #ececec;
   width: 100%;
 }
+@media screen and (min-width: 480px) {
+  .header {
+    padding: 10px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0;
+  }
+}
 .header > .container {
   display: flex;
   align-items: center;
@@ -265,6 +275,7 @@ body {
   z-index: 2;
   padding-top: 10px;
   padding-bottom: 48px;
+  transform: translateX(100%);
 }
 .mob__menu > .container {
   display: flex;
@@ -284,16 +295,30 @@ body {
     display: none;
   }
 }
+.mob__menu.is-open {
+  transform: translateX(0);
+}
+.mob__menu-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  color: var(--primary-title-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob__menu-link:hover, .mob__menu-link:focus {
+  color: var(--accent-color);
+}
 
 .menu-close {
   width: 40px;
   height: 40px;
   background-color: transparent;
-  margin-left: auto;
   border: none;
   padding: 0;
   display: block;
   margin-left: auto;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-close:focus, .menu-close:hover {
   color: var(--accent-color);
@@ -305,17 +330,6 @@ body {
 
 .mob__menu-item:not(:last-child) {
   margin-bottom: 32px;
-}
-
-.mob__menu-link {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 47px;
-  letter-spacing: 0.02em;
-  color: var(--primary-title-color);
-}
-.mob__menu-link:hover, .mob__menu-link:focus {
-  color: var(--accent-color);
 }
 
 .mob__connect-tel {
@@ -406,7 +420,11 @@ body {
 }
 .hero > .container {
   width: 100%;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  align-items: center;
+  margin: 0 auto;
 }
 @media screen and (min-width: 480px) {
   .hero {
@@ -425,6 +443,7 @@ body {
   }
 }
 .hero__title {
+  max-width: 360px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -432,13 +451,10 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white);
-  margin-left: auto;
-  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    height: 84px;
-    width: 360px;
+    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -446,7 +462,7 @@ body {
     font-size: 44px;
     line-height: 1.36;
     height: 120px;
-    width: 696px;
+    min-width: 696px;
   }
 }
 .hero__btn {
@@ -688,6 +704,7 @@ body {
 .footer {
   background-color: var(--primary-bg-color);
   padding: 60px 0;
+  text-align: center;
 }
 .footer__box {
   display: flex;
@@ -699,22 +716,23 @@ body {
   .footer__box {
     align-items: baseline;
     gap: 0;
-    flex-wrap: nowrap;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__box {
+    flex-wrap: nowrap;
     align-items: baseline;
     gap: 0;
   }
 }
 @media screen and (min-width: 768px) {
   .footer__address-box {
-    flex-basis: 50%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__address-box {
+    width: auto;
     margin-right: 70px;
   }
 }
@@ -775,18 +793,23 @@ body {
 
 @media screen and (min-width: 768px) {
   .join {
-    flex-basis: 50%;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .join {
+    width: auto;
+    margin-right: auto;
   }
 }
 .join__title {
+  display: block;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white);
-  margin-bottom: 20px;
 }
 @media screen and (min-width: 1200px) {
   .join__title {
@@ -796,6 +819,7 @@ body {
 .join__list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 @media screen and (min-width: 1200px) {
@@ -819,7 +843,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .mailing {
-    margin-left: auto;
+    width: auto;
   }
 }
 .mailing__form {
@@ -827,6 +851,11 @@ body {
   flex-wrap: wrap;
   align-items: center;
   gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .mailing__form {
+    gap: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .mailing__form {

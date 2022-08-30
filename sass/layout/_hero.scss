@@ -48,7 +48,11 @@
   }
   > .container {
     width: 100%;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    align-items: center;
+    margin: 0 auto;
   }
   @media screen and (min-width: 480px) {
     max-width: 100%;
@@ -61,6 +65,7 @@
     padding-bottom: 200px;
   }
   &__title {
+    max-width: 360px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
@@ -68,17 +73,14 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white);
-    margin-left: auto;
-    margin-right: auto;
     @media screen and (min-width: 768px) {
-      height: 84px;
-      width: 360px;
+      width: 768px;
     }
     @media screen and (min-width: 1200px) {
       font-size: 44px;
       line-height: 1.36;
       height: 120px;
-      width: 696px;
+      min-width: 696px;
     }
   }
 
