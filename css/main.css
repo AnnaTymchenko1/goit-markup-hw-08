@@ -143,7 +143,7 @@ body {
   border-bottom: 1px solid #ececec;
   width: 100%;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .header {
     padding: 10px 0;
   }
@@ -283,7 +283,17 @@ body {
   height: 100%;
   justify-content: space-between;
   overflow: auto;
-  padding-left: 40px;
+  padding: 0 40px;
+}
+@media screen and (max-width: 767px) {
+  .mob__menu > .container {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 429px) {
+  .mob__menu > .container {
+    padding: 0 20px;
+  }
 }
 @media screen and (min-width: 768px) {
   .mob__menu {
@@ -334,20 +344,30 @@ body {
 
 .mob__connect-tel {
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.17;
+  font-size: 30px;
+  line-height: 1.18;
   letter-spacing: 0.02em;
   display: block;
   color: var(--accent-color);
   margin-bottom: 32px;
 }
+@media screen and (min-width: 350px) {
+  .mob__connect-tel {
+    font-size: 34px;
+  }
+}
 
 .mob__connect-mail {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 350px) {
+  .mob__connect-mail {
+    font-size: 24px;
+  }
 }
 
 .mob__soc-list {
@@ -361,11 +381,17 @@ body {
 
 .mob__soc-link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  padding: 0 10px;
+  padding: 0 5px;
+}
+@media screen and (min-width: 350px) {
+  .mob__soc-link {
+    font-size: 18px;
+    padding: 0 10px;
+  }
 }
 
 .current {
@@ -438,6 +464,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -522,12 +549,7 @@ body {
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 480px) {
-  .activity {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .activity {
     display: none;
   }
@@ -1041,6 +1063,11 @@ body {
   border-radius: 4px;
   padding: 40px;
 }
+@media screen and (max-width: 479px) {
+  .modal {
+    padding: 40px 10px;
+  }
+}
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
@@ -1152,6 +1179,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
